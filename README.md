@@ -92,7 +92,7 @@ bash
 复制代码
 
 查看全部
-git clone https://github.com/yourusername/EdgeNoWindowKiller.git
+git clone https://github.com/8764zui/EdgeNoWindowKiller.git
 cd EdgeNoWindowKiller
 
 提示：首次运行 PowerShell 脚本可能需要执行权限策略调整：
