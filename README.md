@@ -1,4 +1,4 @@
-#EdgeNoWindowKiller
+# EdgeNoWindowKiller
 Windows
 PowerShell
 License: MIT
