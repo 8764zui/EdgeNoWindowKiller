@@ -25,53 +25,35 @@ License: MIT
 方法2：使用 PowerShell 脚本（更灵活）
 下载 kill_invisible_msedge_monitor.ps1
 在 PowerShell 中运行：
-powershell
 
-复制代码
 
-查看全部
-Set-ExecutionPolicy RemoteSigned -Scope CurrentUser  # 仅需执行一次
-.\kill_invisible_msedge_monitor.ps1
+
+  Set-ExecutionPolicy RemoteSigned -Scope CurrentUser  # 仅需执行一次
+  .\kill_invisible_msedge_monitor.ps1
 配置选项
 修改检查间隔时间
 编辑脚本文件，修改顶部的 $interval 变量（单位：秒）：
 
-powershell
 
-复制代码
+  # 在 PS1 文件中修改
+  $interval = 10  # 每10秒检查一次
 
-查看全部
-# 在 PS1 文件中修改
-$interval = 10  # 每10秒检查一次
-batch
-
-复制代码
-
-查看全部
-:: 在 BAT 文件中修改
-timeout /t 10 /nobreak >NUL  # 修改此行中的数字
+  :: 在 BAT 文件中修改
+  timeout /t 10 /nobreak >NUL  # 修改此行中的数字
 启动参数（仅限 PowerShell）
 运行脚本时添加间隔参数：
 
-powershell
 
-复制代码
-
-查看全部
-.\kill_invisible_msedge_monitor.ps1 -IntervalSeconds 15
+  .\kill_invisible_msedge_monitor.ps1 -IntervalSeconds 15
 停止监控
 方法1：任务管理器
 打开任务管理器
 结束名为 Windows PowerShell 或 cmd.exe 的进程
 方法2：命令行
-batch
 
-复制代码
-
-查看全部
-:: 停止所有监控实例
-taskkill /FI "IMAGENAME eq powershell.exe" /FI "WINDOWTITLE eq Windows PowerShell"
-taskkill /FI "IMAGENAME eq cmd.exe"
+  :: 停止所有监控实例
+  taskkill /FI "IMAGENAME eq powershell.exe" /FI "WINDOWTITLE eq Windows PowerShell"
+  taskkill /FI "IMAGENAME eq cmd.exe"
 注意事项
 管理员权限：普通用户权限即可终止当前用户启动的进程
 系统兼容性：
@@ -82,18 +64,9 @@ PowerShell 5.1+ (预装于 Windows 10+)
 脚本不会终止有可见窗口的 Edge 实例
 系统级 Edge 进程（如 Edge Update）不会被终止
 资源占用：约 1-5MB 内存，接近 0% CPU 使用率
-贡献指南
-欢迎提交 Issues 和 Pull Requests！
 
-报告问题：创建 New Issue
-贡献代码：
-bash
-
-复制代码
-
-查看全部
-git clone https://github.com/8764zui/EdgeNoWindowKiller.git
-cd EdgeNoWindowKiller
+  git clone https://github.com/8764zui/EdgeNoWindowKiller.git
+  cd EdgeNoWindowKiller
 
 提示：首次运行 PowerShell 脚本可能需要执行权限策略调整：
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
