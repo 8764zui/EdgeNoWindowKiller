@@ -94,25 +94,6 @@ bash
 查看全部
 git clone https://github.com/yourusername/EdgeNoWindowKiller.git
 cd EdgeNoWindowKiller
-# 修改后提交 PR
-许可证
-本项目采用 MIT 许可证 - 可自由使用、修改和分发。
 
-text
-
-复制代码
-
-查看全部
-Copyright (c) 2025 Your Name
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
 提示：首次运行 PowerShell 脚本可能需要执行权限策略调整：
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
