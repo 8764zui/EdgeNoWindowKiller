@@ -1,7 +1,4 @@
 # EdgeNoWindowKiller
-Windows
-PowerShell
-License: MIT
 
 一个轻量级后台监控工具，当检测到所有 Microsoft Edge 进程都没有可见窗口时自动终止它们。适用于需要强制关闭后台 Edge 进程的场景，如资源清理、隐私保护或自动化测试。
 
